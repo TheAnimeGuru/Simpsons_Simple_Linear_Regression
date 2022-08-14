@@ -34,7 +34,7 @@ def jwb(x, y, w, b):
     cost = 0
     m = x.shape[0]
 
-    for i in range(m-1):
+    for i in range(m):
         f_wb = w*x[i] + b
         cost += (f_wb - y[i])**2
     
@@ -56,7 +56,7 @@ def dw_jwb(x, y, w, b):
     cost = 0
     m = x.shape[0]
 
-    for i in range(m-1):
+    for i in range(m):
         f_wb = w*x[i] + b
         cost += (f_wb - y[i]) * x[i]
     
@@ -80,7 +80,7 @@ def db_jwb(x, y, w, b):
     cost = 0
     m = x.shape[0]
 
-    for i in range(m-1):
+    for i in range(m):
         f_wb = w*x[i] + b
         cost += f_wb - y[i]
     
